@@ -24,7 +24,7 @@
   </div>
   <div class="container clearfix">
     <div class="widget-wrapper col col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-2 col-xs-12">
-      <div class="widget-container" data-tl-widget="event-flyer-widget" data-event-id="a84b5720eb3a6d08" data-theme="theme-dark">
+      <div id="event-flyer-widget" class="widget-container">
       </div>
     </div>
   </div>
@@ -35,6 +35,25 @@
     </a>
   </div>
   <script src="https://widgets.tablelist.com/widgets/embedded/tablelist-widgets-core.min.js"></script>
+  <script>
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    window.TablelistWidgets.onReady(function() {
+      var eventFlyerWidget = new window.TablelistWidgets.widgets.EventFlyerWidget('#event-flyer-widget');
+
+      eventFlyerWidget.init({
+        eventId: 'a84b5720eb3a6d08',
+        attributionId: getUrlParameter('attributionId'),
+        attributionType: getUrlParameter('attributionType'),
+        theme: 'theme-dark'
+      });
+    });
+  </script>
 </body>
 
 </html>
