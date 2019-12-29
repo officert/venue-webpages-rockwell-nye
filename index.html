@@ -24,8 +24,16 @@
     </div>
   </div>
   <div class="container clearfix">
-    <div class="widget-wrapper col col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-2 col-xs-12">
-      <div id="event-flyer-widget" class="widget-container">
+    <div class="widget-wrapper col col-md-4 col-sm-6 col-xs-12">
+      <div id="event-flyer-widget-1" class="widget-container">
+      </div>
+    </div>
+    <div class="widget-wrapper col col-md-4 col-sm-6 col-xs-12">
+      <div id="event-flyer-widget-2" class="widget-container">
+      </div>
+    </div>
+    <div class="widget-wrapper col col-md-4 col-sm-6 col-xs-12">
+      <div id="event-flyer-widget-3" class="widget-container">
       </div>
     </div>
   </div>
@@ -45,10 +53,28 @@
     }
 
     window.TablelistWidgets.onReady(function() {
-      var eventFlyerWidget = new window.TablelistWidgets.widgets.EventFlyerWidget('#event-flyer-widget');
+      var eventFlyerWidget1 = new window.TablelistWidgets.widgets.EventFlyerWidget('#event-flyer-widget-1');
 
-      eventFlyerWidget.init({
+      eventFlyerWidget1.init({
+        eventId: 'e8b6c2a97b6ac61c',
+        attributionId: getUrlParameter('attributionId'),
+        attributionType: getUrlParameter('attributionType'),
+        theme: 'theme-dark'
+      });
+
+      var eventFlyerWidget2 = new window.TablelistWidgets.widgets.EventFlyerWidget('#event-flyer-widget-2');
+
+      eventFlyerWidget2.init({
         eventId: 'a84b5720eb3a6d08',
+        attributionId: getUrlParameter('attributionId'),
+        attributionType: getUrlParameter('attributionType'),
+        theme: 'theme-dark'
+      });
+
+      var eventFlyerWidget3 = new window.TablelistWidgets.widgets.EventFlyerWidget('#event-flyer-widget-3');
+
+      eventFlyerWidget3.init({
+        eventId: 'e921a26b29c39392',
         attributionId: getUrlParameter('attributionId'),
         attributionType: getUrlParameter('attributionType'),
         theme: 'theme-dark'
